@@ -89,7 +89,7 @@ export const Cell: React.FC<CellProps> = ({
       {terrain === TerrainType.Den && (
         <>
           <img
-            src={isBlueDen ? '/assets/den-blue.jpg' : '/assets/den-red.jpg'}
+            src={`${import.meta.env.BASE_URL}assets/${isBlueDen ? 'den-blue.jpg' : 'den-red.jpg'}`}
             alt={isBlueDen ? '蓝方兽穴' : '红方兽穴'}
             style={{ transform: `rotate(${labelRotationDeg}deg)` }}
             className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none brightness-95"
@@ -118,7 +118,7 @@ export const Cell: React.FC<CellProps> = ({
       {terrain === TerrainType.Trap && (
         <>
           <img
-            src="/assets/trap-tile.jpg"
+            src={`${import.meta.env.BASE_URL}assets/trap-tile.jpg`}
             alt="森林陷阱"
             style={{ transform: `rotate(${labelRotationDeg}deg)` }}
             className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none brightness-90"
